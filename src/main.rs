@@ -2,6 +2,7 @@ use lexer::lexer::Lexer;
 use utils::file_reader::FileReader;
 
 pub(crate) mod lexer;
+pub(crate) mod parser;
 pub(crate) mod utils;
 
 fn main() {
@@ -19,10 +20,8 @@ fn main() {
             }
 
             // Now you can pass `tokens` to your parser
-            // parse_tokens(&tokens);
 
-            // Or semantic analyzer
-            // analyze_semantics(&tokens);
+            // Serialize data for language wrappers to handle
         }
         Err(e) => {
             eprintln!("Lexing failed: {}", e);
